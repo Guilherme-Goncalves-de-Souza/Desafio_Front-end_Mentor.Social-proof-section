@@ -1,6 +1,6 @@
 # Desafio Front-end Mentor: Social proof section
 
-Projeto feito sozinho, colocando em prática meus conhecimentos de HTML, CSS, SASS e <strong> Git </strong>.
+Projeto feito sozinho, colocando em prática meus conhecimentos de HTML, CSS, SASS e <strong> GIT </strong>.
 
 Feito com <em>Flexbox</em> e utilizando a estratégia <em><strong>Mobile first</strong></em>.
 
@@ -25,5 +25,5 @@ Desktop design:            | Mobile design:
   
   <br><br>
 
-  <a href = ""> Veja o projeto aqui. </a>
+  <a href = "https://guilherme-goncalves-de-souza.github.io/Desafio_Front-end_Mentor.Social-proof-section/"> Veja o projeto aqui. </a>
 </div>
