@@ -1,0 +1,297 @@
+$font: 'League Spartan', sans-serif;
+
+$review-card: #f7f2f8;
+$p-Headerleft: hsl(303, 10%, 53%);
+$comment-bg-h1-Pheader: hsl(300, 43%, 22%);
+$verified-p-color: hsl(333, 80%, 67%);
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: $font;
+    font-size: 15px;
+
+    height: 100vh;
+}
+
+p{
+    font-weight: 500;
+    font-size: 17.5px;
+    width: 100%;
+    line-height: 20px;
+}
+
+.bg-top{
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/bg-pattern-top-mobile.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    position: absolute;
+    z-index: 1;
+}
+
+.bg-bottom{
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/bg-pattern-bottom-mobile.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    position: absolute;
+    z-index: 1;
+    top: 632px;
+
+    display: none; // it's not right :(
+}
+
+main{
+    position: relative;
+    z-index: 99;
+    padding: 80px 24px;
+
+    .introduction-product{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 50px;
+
+        gap: 50px;
+
+        .left-content{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            gap: 25px;
+
+            h1{
+                font-weight: 700;
+                font-size: 35px;
+                width: 80%;
+                text-align: center;
+
+                color: $comment-bg-h1-Pheader;
+            }
+
+            p{
+                text-align: center;
+                color: $p-Headerleft;
+            }
+        }
+
+        .right-content{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 100%;
+
+            .review{
+                background-color: $review-card;
+                border-radius: 10px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+
+                height: 75px;
+
+                .stars{
+                    display: flex;
+                    flex-direction: row;
+                    gap: 7px;
+                }
+
+                p{
+                    font-weight: 700;
+                    font-size: 15px;
+                    color: $comment-bg-h1-Pheader;
+                }
+            }
+        }
+    }
+
+    .comments{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+
+        .comment{
+            background-color: $comment-bg-h1-Pheader;
+            border-radius: 10px;
+
+            max-width: 350px;
+            height: 250px;
+            padding: 40px 30px;
+
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+
+            p{
+                color: white;
+                font-size: 16.5px;
+                font-weight: 400;
+            }
+
+            .people{
+                display: flex;
+                gap: 20px;
+
+                p{
+                    color: $verified-p-color;
+                }
+
+                p:first-child{
+                    color: white;
+                }
+
+                img{
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 99px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 420px) {
+    .bg-top{
+        background-image: url("../images/bg-pattern-top-desktop.svg");
+    }
+
+    .bg-bottom{
+        background-image: url("../images/bg-pattern-bottom-desktop.svg");
+        background-size: cover;
+        bottom: 887px;
+    
+    }
+
+    main{
+        .introduction-product{
+            .left-content h1{
+                font-size: 50px;
+                width: 70%;
+            }
+
+            .left-content p{
+                font-size: 20px;
+                width: 70%;
+            }
+        }
+    }
+    
+}
+
+@media (min-width: 1250px){
+    body{
+        height: 100%;
+    }
+    .bg-top{
+        background-size: initial;
+    }
+
+    .bg-bottom{
+        display: block;
+        background-size: cover;
+        top: 0px;
+        right: 0px;
+    }
+    main{
+        padding: 90px 160px;
+        padding-bottom: 0;
+        .introduction-product{
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 70px;
+
+            .left-content{
+                flex: 1;
+                align-items: flex-start;
+                h1{
+                    font-size: 52px;
+                    text-align: left;
+                    width: 74%;
+                }
+
+                p{
+                    text-align: left;
+                    font-size: 18px;
+                    width: 82%;
+                }
+            }
+
+            .right-content{
+                flex: 1;
+                align-items: flex-end;
+
+                .review{
+                    min-width: 440px;
+    
+                    flex-direction: row;
+                    gap: 30px;
+                    justify-content: flex-start;
+
+                    padding-left: 30px;
+                    height: 57px;
+                }
+
+                .left{
+                    margin-right: 90px;
+
+                    p{
+                        font-size: 17px;
+                    }
+                }
+
+                .center{
+                    margin-right: 45px;
+                    
+                    p{
+                        font-size: 18px;
+                    }
+                }
+
+                .right{
+                    p{
+                        font-size: 19px;
+                    }
+                }
+            }
+        }
+
+        .comments{
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+
+            .comment{
+                height: 230px;
+            }
+
+            .middle{
+                margin-top: 25px;
+            }
+
+            .bottom{
+                margin-top: 50px;
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) and (min-height: 750px) {
+    main{
+        padding: 115px 160px;
+    }  
+}
